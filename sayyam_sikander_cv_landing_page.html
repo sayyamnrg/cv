@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayyam Sikander | Lead Generation Specialist</title>
+  <meta name="description" content="Professional portfolio landing page for Sayyam Sikander, Lead Generation Specialist, Data Enrichment Expert, Web Researcher and Data Scraping Specialist based in Lahore." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ef2f63;
+      --primary-dark: #c51f4c;
+      --navy: #111827;
+      --text: #374151;
+      --muted: #6b7280;
+      --soft: #fff4f7;
+      --light: #f9fafb;
+      --white: #ffffff;
+      --border: #e5e7eb;
+      --green: #10b981;
+      --shadow: 0 20px 60px rgba(17, 24, 39, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, #ffffff 0%, #fff4f7 45%, #f8fbff 100%);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.75);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 76px;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+      font-size: 22px;
+    }
+
+    .brand-mark {
+      width: 45px;
+      height: 45px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      box-shadow: 0 12px 25px rgba(239, 47, 99, 0.28);
+      font-size: 17px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-weight: 800;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      box-shadow: 0 18px 36px rgba(239, 47, 99, 0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 44px rgba(239, 47, 99, 0.36);
+    }
+
+    .btn-light {
+      color: var(--navy);
+      background: var(--white);
+      border-color: var(--border);
+      box-shadow: 0 14px 30px rgba(17, 24, 39, 0.06);
+    }
+
+    .hero {
+      padding: 92px 0 70px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid #ffd4df;
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 13px;
+      box-shadow: 0 10px 25px rgba(239, 47, 99, 0.10);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(39px, 6vw, 70px);
+      line-height: 1.04;
+      color: var(--navy);
+      letter-spacing: -0.06em;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 680px;
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 0 14px 35px rgba(17, 24, 39, 0.06);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .profile-card {
+      position: relative;
+      background: var(--white);
+      border: 1px solid rgba(229, 231, 235, 0.95);
+      border-radius: 36px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-card::before {
+      content: "";
+      position: absolute;
+      inset: -16px -16px auto auto;
+      width: 190px;
+      height: 190px;
+      border-radius: 999px;
+      background: rgba(239, 47, 99, 0.12);
+      z-index: -1;
+    }
+
+    .avatar {
+      width: 108px;
+      height: 108px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--primary), #ff8ba8);
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      font-size: 36px;
+      font-weight: 900;
+      box-shadow: 0 20px 36px rgba(239, 47, 99, 0.24);
+      margin-bottom: 22px;
+    }
+
+    .profile-card h2 {
+      color: var(--navy);
+      font-size: 31px;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .profile-card .role {
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      font-size: 14px;
+    }
+
+    .icon {
+      min-width: 33px;
+      width: 33px;
+      height: 33px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      background: var(--soft);
+      color: var(--primary);
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    h2.section-title {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.12;
+      letter-spacing: -0.05em;
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.88);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 18px 45px rgba(17, 24, 39, 0.07);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 58px rgba(17, 24, 39, 0.11);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin: 17px 0 8px;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 16px 38px rgba(17, 24, 39, 0.06);
+    }
+
+    .date {
+      color: var(--primary);
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    .timeline-item h3 {
+      color: var(--navy);
+      font-size: 22px;
+      letter-spacing: -0.03em;
+      margin-bottom: 4px;
+    }
+
+    .company {
+      font-weight: 800;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      font-weight: 800;
+      box-shadow: 0 12px 26px rgba(17, 24, 39, 0.05);
+      font-size: 14px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, var(--navy), #272f41);
+      color: var(--white);
+      border-radius: 38px;
+      padding: 54px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: -70px;
+      width: 240px;
+      height: 240px;
+      background: rgba(239, 47, 99, 0.4);
+      border-radius: 999px;
+    }
+
+    .cta h2 {
+      font-size: clamp(29px, 4vw, 45px);
+      line-height: 1.15;
+      letter-spacing: -0.05em;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #d1d5db;
+      max-width: 680px;
+    }
+
+    footer {
+      padding: 40px 0;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 600;
+      border-top: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-3,
+      .cta {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding-top: 58px;
+      }
+
+      .profile-card,
+      .cta {
+        padding: 28px;
+        border-radius: 28px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="brand-mark">SS</span>
+        <span>Sayyam Sikander</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="btn btn-primary">Hire Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">✅ Professional Lead Generation Specialist</div>
+          <h1>Accurate <span>B2B Leads</span>, Data Enrichment & Email Outreach</h1>
+          <p>
+            I help businesses build clean, targeted and CRM-ready prospect lists, enrich missing data and manage personalized email outreach campaigns designed for better engagement and higher open rates.
+          </p>
+          <div class="hero-actions">
+            <a href="mailto:prsnrg@gmail.com" class="btn btn-primary">Contact Me</a>
+            <a href="https://www.linkedin.com/in/sayamsikander/" target="_blank" class="btn btn-light">View LinkedIn</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>4+ Years</strong><span>Lead Generation Experience</span></div>
+            <div class="stat"><strong>Manual</strong><span>Research & Data Collection</span></div>
+            <div class="stat"><strong>CRM Ready</strong><span>Excel / CSV Deliverables</span></div>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="avatar">SS</div>
+          <h2>Sayyam Sikander</h2>
+          <div class="role">Lead Generation • Data Entry • Web Research • Data Scraping</div>
+          <p>
+            Detail-oriented researcher with strong experience in collecting, cleaning and organizing accurate business data for sales and outreach teams.
+          </p>
+          <div class="contact-list">
+            <div class="contact-item"><span class="icon">📍</span><span>Narang Mandi, Tehsil Muridke, District Sheikhupura<br><strong>Reliable to commute to Lahore</strong></span></div>
+            <div class="contact-item"><span class="icon">📞</span><span>030-9569665</span></div>
+            <div class="contact-item"><span class="icon">✉️</span><span>prsnrg@gmail.com</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Services</div>
+          <h2 class="section-title">Professional support for lead lists, research and data tasks.</h2>
+          <p>Clean, organized and accurate data for outreach, CRM upload, prospecting, cold email campaigns and business development.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">🎯</div>
+            <h3>B2B Lead Generation</h3>
+            <p>Targeted company and contact research using Google, company websites, LinkedIn, maps and online directories.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📧</div>
+            <h3>Email Outreach Campaign Management</h3>
+            <p>Manual and personalized cold email sending, campaign setup, follow-up support, HTML email templates and inbox-focused outreach management.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📊</div>
+            <h3>Data Enrichment</h3>
+            <p>Append missing company names, emails, phone numbers, LinkedIn URLs, websites, addresses and other useful fields.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🔎</div>
+            <h3>Web Research</h3>
+            <p>Manual research from public sources including directories, business listings, company websites and search engines.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🧹</div>
+            <h3>Data Cleaning</h3>
+            <p>Remove duplicates, fix formatting issues, clean spreadsheets and prepare final Excel or CSV files.</p>
+          </div>
+          <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Data Extraction</h3>
+            <p>Extract structured information from online sources and organize it into clear, ready-to-use spreadsheets.</p>
+          </div>
+          <div class="card">
+            <div class="icon">✅</div>
+            <h3>Quality Checking</h3>
+            <p>Review records carefully for accuracy, missing details, formatting and consistency before final delivery.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🚀</div>
+            <h3>High Open Rate Support</h3>
+            <p>Improve outreach performance with targeted lists, personalized messages, clean data, proper formatting and non-spammy email copy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Work Experience</div>
+          <h2 class="section-title">Experienced in research, data entry and lead generation workflows.</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="date">September 2024 — Present</div>
+            <div>
+              <h3>Lead Generation Specialist</h3>
+              <div class="company">Self-Employed / Fiverr / Local Clients</div>
+              <ul>
+                <li>Provide lead generation, web research, data enrichment, data scraping and email outreach campaign management services for clients.</li>
+                <li>Use Google search, company websites, LinkedIn, Google Maps and online directories for targeted research.</li>
+                <li>Prepare clean Excel and CSV files for outreach, CRM use and business development campaigns.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">September 2020 — September 2024</div>
+            <div>
+              <h3>Lead Generation Specialist</h3>
+              <div class="company">Leads4Contact, Lahore</div>
+              <ul>
+                <li>Completed B2B lead generation, web research, data extraction and data collection projects.</li>
+                <li>Worked with sources such as Google, LinkedIn, Google Maps, Yelp, Yellow Pages, Yell and business directories.</li>
+                <li>Maintained accurate spreadsheets with attention to detail, speed and consistency.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">November 2019 — September 2020</div>
+            <div>
+              <h3>Data Entry Operator / Office Clerk</h3>
+              <div class="company">Flyers International School, Narang</div>
+              <ul>
+                <li>Maintained paper and electronic student records and prepared reports for auditing purposes.</li>
+                <li>Used MS Office and office equipment including scanners and fax machines.</li>
+                <li>Handled administrative duties with strong organization and typing accuracy.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">April 2016 — November 2019</div>
+            <div>
+              <h3>Computer Operator</h3>
+              <div class="company">Fast Service Center, Narang</div>
+              <ul>
+                <li>Used Microsoft Word, Excel, Access, PowerPoint and Outlook to complete office assignments.</li>
+                <li>Supported daily computer operations, documentation and data handling tasks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Education</div>
+          <h2 class="section-title">Academic background in computer science and science.</h2>
+          <p>Education details from my professional CV.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Master of Computer Science</h3>
+            <p><strong>Virtual University of Pakistan</strong><br>Lahore • August 2020</p>
+          </div>
+          <div class="card">
+            <div class="icon">📘</div>
+            <h3>Bachelor of Science</h3>
+            <p><strong>Punjab University</strong><br>Lahore • August 2016</p>
+          </div>
+          <div class="card">
+            <div class="icon">💻</div>
+            <h3>Professional Focus</h3>
+            <p>Computer knowledge, data handling, MS Office, research, data entry and lead generation support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Skills & Tools</div>
+          <h2 class="section-title">Core skills for accurate research and professional data delivery.</h2>
+        </div>
+        <div class="skills">
+          <span class="skill">B2B Lead Generation</span>
+          <span class="skill">Web Research</span>
+          <span class="skill">Data Enrichment</span>
+          <span class="skill">Data Mining</span>
+          <span class="skill">Data Scraping</span>
+          <span class="skill">Data Entry</span>
+          <span class="skill">MS Excel</span>
+          <span class="skill">MS Word</span>
+          <span class="skill">Sales CRM Software</span>
+          <span class="skill">Google Maps Research</span>
+          <span class="skill">LinkedIn Research</span>
+          <span class="skill">CSV Formatting</span>
+          <span class="skill">Cold Email Outreach</span>
+          <span class="skill">Campaign Management</span>
+          <span class="skill">Email Copywriting</span>
+          <span class="skill">HTML Email Templates</span>
+          <span class="skill">Follow-up Management</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta" id="contact">
+          <div>
+            <h2>Need accurate leads, clean data or email outreach support?</h2>
+            <p>Contact me for lead generation, data enrichment, web research, data entry, spreadsheet cleaning, cold email campaign management and manual outreach support.</p>
+          </div>
+          <a href="mailto:prsnrg@gmail.com" class="btn btn-primary">Email Me Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Sayyam Sikander. Professional Lead Generation & Data Research Portfolio.
+    </div>
+  </footer>
+</body>
+</html>
